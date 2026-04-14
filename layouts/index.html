@@ -1,0 +1,103 @@
+{{ define "main" }}
+<style>
+  /* Hiệu ứng xuất hiện mượt mà */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 3rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  /* Card giao diện chuyên nghiệp */
+  .project-card {
+    background: var(--entry);
+    border-radius: 12px;
+    padding: 2rem;
+    text-decoration: none !important;
+    color: inherit;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    animation: fadeInUp 0.8s ease-out backwards;
+  }
+
+  /* Hiệu ứng nổi khối khi di chuột */
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+  }
+
+  .project-card:nth-child(1) { animation-delay: 0.2s; }
+  .project-card:nth-child(2) { animation-delay: 0.4s; }
+  .project-card:nth-child(3) { animation-delay: 0.6s; }
+
+  .project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--secondary);
+  }
+</style>
+
+<div class="hero-section">
+  <h1>Chào bạn, Hỉ đây!</h1>
+  <p>Nâng cấp kỹ năng, tối ưu thời gian và bứt phá thu nhập ngay hôm nay.</p>
+
+  <div class="project-grid">
+    <a href="https://tuyendungthienkhoi.pages.dev/" target="_blank" class="project-card">
+      <span class="project-icon">🏢</span>
+      <h3 class="project-title">Môi Giới Bất Động Sản</h3>
+      <p class="project-desc">Bỏ qua lương cứng. Thu nhập tối thiểu 35,5 triệu/giao dịch, có thể lên đến 100 triệu/giao dịch. Nhận đào tạo thực chiến từ con số 0.</p>
+    </a>
+
+    <a href="https://speedreading.vn/" target="_blank" class="project-card">
+      <span class="project-icon">⚡</span>
+      <h3 class="project-title">Đọc Siêu Tốc - Hiểu Sâu Sắc</h3>
+      <p class="project-desc">Tiết kiệm thời gian nạp kiến thức. Xử lý lượng thông tin lớn cực nhanh, tăng vọt hiệu suất làm việc và học tập mỗi ngày.</p>
+    </a>
+
+    <a href="https://dautuchungkhoan.pages.dev/" target="_blank" class="project-card">
+      <span class="project-icon">📈</span>
+      <h3 class="project-title">Đầu Tư Chứng Khoán</h3>
+      <p class="project-desc">Bắt tiền làm việc cho bạn. Nắm vững tư duy đầu tư, quản trị rủi ro và nhân bản tài sản an toàn cho người mới bắt đầu.</p>
+    </a>
+  </div>
+</div>
+{{ end }}
